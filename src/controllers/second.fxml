@@ -2,27 +2,38 @@
 
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.PasswordField?>
-<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ListView?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="361.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
    <children>
-      <Rectangle arcWidth="5.0" fill="DODGERBLUE" height="73.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="361.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" />
-      <Label layoutX="139.0" layoutY="27.0" text="FIRST SCENE" textFill="WHITE">
+      <Rectangle arcWidth="5.0" fill="#ff821f" height="73.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="361.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" />
+      <Label layoutX="129.0" layoutY="27.0" text="SECOND SCENE" textFill="WHITE" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="129.33333333333331">
          <font>
             <Font name="System Bold" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="55.0" layoutY="111.0" prefHeight="17.0" prefWidth="83.0" text="Username" />
-      <TextField fx:id="txtUsername" layoutX="181.0" layoutY="107.0" />
-      <Label layoutX="55.0" layoutY="144.0" prefHeight="17.0" prefWidth="83.0" text="Password" />
-      <PasswordField fx:id="txtPassword" layoutX="181.0" layoutY="140.0" />
-      <Button fx:id="btnEnter" layoutX="258.0" layoutY="183.0" mnemonicParsing="false" onAction="#login" prefHeight="25.0" prefWidth="71.0" text="Enter" />
-      <Button fx:id="btnClear" layoutX="181.0" layoutY="183.0" mnemonicParsing="false" onAction="#clear" prefHeight="25.0" prefWidth="71.0" text="Clear" />
-      <Label fx:id="lblError" layoutX="55.0" layoutY="187.0" prefHeight="17.0" prefWidth="109.0" textFill="RED" />
+      <Button fx:id="btnEnter" layoutX="258.0" layoutY="204.0" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: red;" text="Delete">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="btnClear" layoutX="258.0" layoutY="170.0" mnemonicParsing="false" onAction="#update" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: yellow;" text="Update">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="lblWelcome" layoutX="14.0" layoutY="75.0" prefHeight="17.0" prefWidth="315.0" text="Hello stranger, this is your inventory" />
+      <ListView layoutX="14.0" layoutY="102.0" prefHeight="128.0" prefWidth="231.0" style="-fx-border-color: black;" />
+      <Button fx:id="btnEnter1" layoutX="258.0" layoutY="136.0" mnemonicParsing="false" onAction="#detail" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: lightgreen;" text="Detail">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
+      <Button fx:id="btnClear1" layoutX="258.0" layoutY="102.0" mnemonicParsing="false" onAction="#add" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: green;" text="Add">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+      </Button>
    </children>
 </AnchorPane>
