@@ -1,19 +1,25 @@
 package controllers;
 
+import controllers.dto.User;
 import javafx.application.Application;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 
+import java.io.IOException;
+
 public class Main extends Application {
+    private static Stage stg;
 
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
+        stg = primaryStage;
         Parent root = FXMLLoader.load(getClass().getResource("first.fxml"));
-        primaryStage.setTitle("Communication between multiple controllers");
-        primaryStage.setScene(new Scene(root));
-        primaryStage.show();
+        stg.setTitle("Communication between multiple controllers");
+        stg.setScene(new Scene(root));
+        stg.show();
     }
 
     /**
@@ -24,5 +30,14 @@ public class Main extends Application {
      */
     public static void main(String[] args) {
         launch(args);
+    }
+
+    public void setLogin(User loggedInUser) throws IOException {
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("second.fxml"));
+        Parent pane = loader.load();
+
+        SecondController secondController = loader.getController();
+        secondController.setUser(loggedInUser);
+        stg.getScene().setRoot(pane);
     }
 }

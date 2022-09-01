@@ -7,7 +7,7 @@
 <?import javafx.scene.shape.Rectangle?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="361.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="239.0" prefWidth="361.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.SecondController">
    <children>
       <Rectangle arcWidth="5.0" fill="#ff821f" height="73.0" smooth="false" stroke="TRANSPARENT" strokeType="INSIDE" strokeWidth="0.0" width="361.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="-1.0" />
       <Label layoutX="129.0" layoutY="27.0" text="SECOND SCENE" textFill="WHITE" AnchorPane.leftAnchor="129.0" AnchorPane.rightAnchor="129.33333333333331">
@@ -24,7 +24,7 @@
             <Font name="System Bold" size="12.0" />
          </font></Button>
       <Label fx:id="lblWelcome" layoutX="14.0" layoutY="75.0" prefHeight="17.0" prefWidth="315.0" text="Hello stranger, this is your inventory" />
-      <ListView layoutX="14.0" layoutY="102.0" prefHeight="128.0" prefWidth="231.0" style="-fx-border-color: black;" />
+      <ListView fx:id="lvItems" layoutX="14.0" layoutY="102.0" prefHeight="128.0" prefWidth="231.0" style="-fx-border-color: black;" />
       <Button fx:id="btnEnter1" layoutX="258.0" layoutY="136.0" mnemonicParsing="false" onAction="#detail" prefHeight="25.0" prefWidth="71.0" style="-fx-background-color: lightgreen;" text="Detail">
          <font>
             <Font name="System Bold" size="12.0" />
