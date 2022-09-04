@@ -33,11 +33,13 @@ public class Main extends Application {
     }
 
     public void setLogin(User loggedInUser) throws IOException {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("second.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("main.fxml"));
         Parent pane = loader.load();
 
-        SecondController secondController = loader.getController();
-        secondController.setUser(loggedInUser);
+        MainController mainController = loader.getController();
+        mainController.setUser(loggedInUser);
         stg.getScene().setRoot(pane);
+        stg.setHeight(450);
+        stg.setWidth(650);
     }
 }

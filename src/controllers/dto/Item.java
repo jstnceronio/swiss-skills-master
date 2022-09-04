@@ -1,27 +1,34 @@
 package controllers.dto;
 
+/**
+ * Generated using: https://codverter.com/src/sqltoclass
+ */
 public class Item {
-    private int itemId;
     private String name;
+    private double price;
 
-    public Item(int itemId, String name) {
-        this.itemId = itemId;
-        this.name = name;
+    public String getname()
+    {
+        return this.name;
+    }
+    public void setname(String value)
+    {
+        this.name = value;
     }
 
-    public int getItemId() {
-        return itemId;
+    public double getprice()
+    {
+        return this.price;
+    }
+    public void setprice(double value)
+    {
+        this.price = value;
     }
 
-    public void setItemId(int itemId) {
-        this.itemId = itemId;
-    }
 
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+    public Item(String name_,double price_)
+    {
+        this.name = name_;
+        this.price = price_;
     }
 }
